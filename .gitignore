@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# build
+/dist
+/build
+
+# environment
+.env
+.env.local
+
+# misc
+.DS_Store
+*.log
+
+# database
+/db.sqlite
+/db.sqlite-journal
+
+# IDE
+.vscode/
+.idea/
