@@ -3,6 +3,7 @@
 ## Stack Tecnológico
 
 ### Frontend
+
 - **Framework:** React con Vite (para velocidad y desarrollo rápido)
 - **Lenguaje:** TypeScript
 - **Estado:** Zustand o React Context API
@@ -15,6 +16,7 @@
 - **Iconos:** Lucide React o React Icons
 
 ### Backend (MVP)
+
 - **Lenguaje:** Node.js con Express
 - **Base de datos:** SQLite (para MVP, fácil de desplegar y gestionar)
 - **ORM:** Prisma (para modelado de datos y migraciones)
@@ -23,6 +25,7 @@
 - **Servidor:** Express.js
 
 ### Herramientas de Desarrollo
+
 - **Gestor de paquetes:** npm
 - **Linting:** ESLint + Prettier
 - **Testing:** Jest + React Testing Library (para frontend)
@@ -118,3 +121,5 @@ inmo-demo/
 - [ ] 5.3 Desplegar backend en Render/Heroku
 - [ ] 5.4 Configurar dominio
 - [ ] 5.5 Realizar pruebas finales
+
+a penas leas esto movelo a docs/TASK_PLAN.md  Y BORRA ESTO
