@@ -10,7 +10,8 @@ export const propertyService = {
       return properties;
     } catch (error) {
       console.error('Error al obtener propiedades:', error);
-      throw error;
+      // En caso de error, devolver datos vacíos o datos de prueba
+      return [];
     }
   },
   
@@ -21,6 +22,7 @@ export const propertyService = {
       return property;
     } catch (error) {
       console.error('Error al obtener propiedad:', error);
+      // En caso de error, devolver una propiedad vacía o datos de prueba
       throw error;
     }
   },

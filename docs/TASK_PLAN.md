@@ -35,33 +35,26 @@
 
 ```
 inmo-demo/
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │   ├── db/
-│   │   ├── utils/
-│   │   └── app.ts
-│   ├── package.json
-│   └── tsconfig.json
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── assets/
-│   │   ├── hooks/
-│     │   ├── services/
-│   │   ├── store/
-│   │   ├── utils/
-│   │   └── App.tsx
-│   ├── package.json
-│   └── tsconfig.json
-├── .gitignore
-├── README.md
-└── TASK_PLAN.md
+└── backend/
+    └── src/
+        ├── controllers/
+        ├── models/
+        ├── routes/
+        ├── middleware/
+        ├── db/
+        ├── utils/
+        └── app.ts
+└── frontend/
+    ├── public/
+    ├── src/
+    │   ├── components/
+    │   ├── pages/
+    │   ├── assets/
+    │   ├── hooks/
+    │   ├── services/
+    │   ├── store/
+    │   └── utils/
+    └── App.tsx
 ```
 
 ## Checklist de Tareas
@@ -121,5 +114,3 @@ inmo-demo/
 - [ ] 5.3 Desplegar backend en Render/Heroku
 - [ ] 5.4 Configurar dominio
 - [ ] 5.5 Realizar pruebas finales
-
-a penas leas esto movelo a docs/TASK_PLAN.md  Y BORRA ESTO

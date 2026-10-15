@@ -6,6 +6,7 @@ Este es el repositorio para el MVP de la web inmobiliaria en Galicia.
 
 - `frontend/`: Código del frontend (React + TypeScript)
 - `backend/`: Código del backend (Node.js + Express + TypeScript)
+- `docs/`: Documentación del proyecto
 
 ## Instrucciones de Desarrollo
 
@@ -25,4 +26,4 @@ Este es el repositorio para el MVP de la web inmobiliaria en Galicia.
 
 ## Plan de Desarrollo
 
-Consultar el archivo [TASK_PLAN.md](TASK_PLAN.md) para ver el plan detallado de implementación.
+Consultar el archivo [docs/TASK_PLAN.md](docs/TASK_PLAN.md) para ver el plan detallado de implementación.

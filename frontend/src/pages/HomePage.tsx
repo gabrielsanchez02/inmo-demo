@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import FeaturedProperties from '../components/FeaturedProperties';
 import WhyChooseUs from '../components/WhyChooseUs';
+import BackendStatus from '../components/BackendStatus';
 import { Property } from '../types';
 import { propertyService } from '../services/propertyService';
 
@@ -78,6 +79,9 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       <Hero />
+      <div className="container mx-auto px-4 py-4">
+        <BackendStatus />
+      </div>
       <FeaturedProperties properties={featuredProperties} />
       <WhyChooseUs />
     </Layout>

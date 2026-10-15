@@ -4,9 +4,55 @@ import { formatPrice, formatArea, getPropertyTypeText } from '../utils/propertyU
 
 interface FeaturedPropertiesProps {
   properties: Property[];
+  loading?: boolean;
+  error?: string | null;
 }
 
-const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({ properties }) => {
+const FeaturedProperties: React.FC<FeaturedPropertiesProps> = ({ properties, loading = false, error = null }) => {
+  if (loading) {
+    return (
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-4"></div>
+            <p className="text-gray-600">Cargando propiedades destacadas...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="text-red-500 mb-4">
+              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.66 1.383-3L13.75 14m-2.5-2h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 className="text-xl font-medium text-gray-900 mb-2">Error al cargar las propiedades</h3>
+            <p className="text-gray-500">{error}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (properties.length === 0) {
+    return (
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h3 className="text-xl font-medium text-gray-900 mb-2">No hay propiedades disponibles</h3>
+            <p className="text-gray-500">No se encontraron propiedades en la base de datos.</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
