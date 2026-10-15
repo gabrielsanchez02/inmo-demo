@@ -23,9 +23,10 @@ model Property {
   bedrooms  Int
   bathrooms Int
   area      Int
-  images    String[]
+  image     String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  leads     Lead[]
 }
 
 model Lead {
@@ -35,7 +36,7 @@ model Lead {
   phone     String
   message   String
   propertyId  Int?
-  property  Property?
+  property  Property @relation(fields: [propertyId], references: [id])
   status    String @default("new") // "new", "contacted", "visit_scheduled", "discarded"
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

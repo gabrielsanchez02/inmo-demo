@@ -77,12 +77,12 @@ inmo-demo/
 
 ### Fase 2: Desarrollo del Frontend
 
-- [x] 2.1 Crear estructura de componentes base (Header, Footer, Layout)
-- [x] 2.2 Implementar página de inicio (Landing Page)
-- [x] 2.3 Crear conjunto de datos ficticios mockData.json
-- [x] 2.4 Implementar sección Hero con buscador principal
-- [x] 2.5 Implementar sección de destacados
-- [x] 2.6 Implementar sección "Por qué elegirnos en Galicia"
+- [ ] 2.1 Crear estructura de componentes base (Header, Footer, Layout)
+- [ ] 2.2 Implementar página de inicio (Landing Page)
+- [ ] 2.3 Crear conjunto de datos ficticios mockData.json
+- [ ] 2.4 Implementar sección Hero con buscador principal
+- [ ] 2.5 Implementar sección de destacados
+- [ ] 2.6 Implementar sección "Por qué elegirnos en Galicia"
 - [ ] 2.7 Implementar buscador/Catálogo Interactivo
 - [ ] 2.8 Implementar sección Asistente IA
 - [ ] 2.9 Implementar formulario de contacto
@@ -94,27 +94,27 @@ inmo-demo/
 
 ### Fase 3: Desarrollo del Backend
 
-- [ ] [ ] Crear modelos de datos (Inmueble, Lead)
-- [ ] [ ] Implementar rutas CRUD para inmuebles
-- [ ] [ ] Implementar rutas CRUD para leads
-- [ ] [ ] Implementar autenticación básica para panel admin
-- [ ] [ ] Implementar validación de datos
-- [ ] [ ] Implementar middleware de autenticación
-- [ ] [ ] Configurar rutas protegidas para admin
+- [ ] 3.1 Crear modelos de datos (Inmueble, Lead)
+- [ ] 3.2 Implementar rutas CRUD para inmuebles
+- [ ] 3.3 Implementar rutas CRUD para leads
+- [ ] 3.4 Implementar autenticación básica para panel admin
+- [ ] 3.5 Implementar validación de datos
+- [ ] 3.6 Implementar middleware de autenticación
+- [ ] 3.7 Configurar rutas protegidas para admin
 
 ### Fase 4: Integración y Testing
 
-- [ ] [ ] Integrar frontend con backend
-- [ ] [ ] Implementar llamadas a API desde frontend
-- [ ] [ ] Pruebas unitarias y de integración
-- [ ] [ ] Pruebas de UI (end-to-end)
-- [ ] [ ] Optimización de rendimiento
-- [ ] [ ] Documentación final
+- [ ] 4.1 Integrar frontend con backend
+- [ ] 4.2 Implementar llamadas a API desde frontend
+- [ ] 4.3 Pruebas unitarias y de integración
+- [ ] 4.4 Pruebas de UI (end-to-end)
+- [ ] 4.5 Optimización de rendimiento
+- [ ] 4.6 Documentación final
 
 ### Fase 5: Deploy y Entrega
 
-- [ ] [ ] Preparar entorno de producción
-- [ ] [ ] Desplegar frontend en Vercel
-- [ ] [ ] Desplegar backend en Render/Heroku
-- [ ] [ ] Configurar dominio
-- [ ] [ ] Realizar pruebas finales
+- [ ] 5.1 Preparar entorno de producción
+- [ ] 5.2 Desplegar frontend en Vercel
+- [ ] 5.3 Desplegar backend en Render/Heroku
+- [ ] 5.4 Configurar dominio
+- [ ] 5.5 Realizar pruebas finales
