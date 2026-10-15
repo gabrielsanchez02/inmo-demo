@@ -94,13 +94,13 @@ inmo-demo/
 
 ### Fase 3: Desarrollo del Backend
 
-- [ ] 3.1 Crear modelos de datos (Inmueble, Lead)
-- [ ] 3.2 Implementar rutas CRUD para inmuebles
-- [ ] 3.3 Implementar rutas CRUD para leads
-- [ ] 3.4 Implementar autenticación básica para panel admin
-- [ ] 3.5 Implementar validación de datos
-- [ ] 3.6 Implementar middleware de autenticación
-- [ ] 3.7 Configurar rutas protegidas para admin
+- [x] 3.1 Crear modelos de datos (Inmueble, Lead)
+- [x] 3.2 Implementar rutas CRUD para inmuebles
+- [x] 3.3 Implementar rutas CRUD para leads
+- [x] 3.4 Implementar autenticación básica para panel admin
+- [x] 3.5 Implementar validación de datos
+- [x] 3.6 Implementar middleware de autenticación
+- [x] 3.7 Configurar rutas protegidas para admin
 
 ### Fase 4: Integración y Testing
 

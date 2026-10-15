@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { leadService } from '../services/leadService';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const ContactForm: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,16 +23,24 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
     try {
-      // En una aplicación real, aquí se haría una llamada a la API
-      console.log('Formulario enviado:', formData);
-      // Simulamos un delay para mostrar el estado de carga
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Enviar datos a la API
+      const leadData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        status: 'new' as const
+      };
+      
+      await leadService.createLead(leadData);
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-    } catch (error) {
-      console.error('Error al enviar el formulario:', error);
+    } catch (err) {
+      console.error('Error al enviar el formulario:', err);
+      setError('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
     } finally {
       setIsSubmitting(false);
     }
@@ -43,6 +53,12 @@ const ContactForm: React.FC = () => {
       {submitSuccess ? (
         <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
           <p>¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.</p>
+        </div>
+      ) : null}
+      
+      {error ? (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+          <p>{error}</p>
         </div>
       ) : null}
       

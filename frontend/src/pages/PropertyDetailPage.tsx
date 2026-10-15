@@ -1,18 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { Property } from '../types';
-import mockData from '../mockData.json';
+import { propertyService } from '../services/propertyService';
 
 const PropertyDetailPage: React.FC = () => {
   const [property, setProperty] = useState<Property | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // En una aplicación real, aquí se haría una llamada a la API para obtener la propiedad por ID
-    // Por ahora, usamos los datos mock
-    const mockProperty = mockData[0]; // Tomamos la primera propiedad como ejemplo
-    setProperty(mockProperty);
-    setLoading(false);
+    // En una aplicación real, se obtendría el ID de la propiedad desde las rutas
+    // Para este ejemplo, usamos el primer ID disponible
+    const fetchProperty = async () => {
+      try {
+        setLoading(true);
+        // En una aplicación real, se obtendría el ID desde las rutas
+        // Por ahora, usamos el primer ID disponible
+        const fetchedProperty = await propertyService.getPropertyById(1);
+        setProperty(fetchedProperty);
+      } catch (err) {
+        console.error('Error al obtener la propiedad:', err);
+        setError('Error al cargar la propiedad. Por favor, inténtalo de nuevo más tarde.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProperty();
   }, []);
 
   if (loading) {
@@ -21,6 +35,30 @@ const PropertyDetailPage: React.FC = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (error) {
+    return (
+      <Layout>
+        <div className="container mx-auto px-4 py-8">
+          <div className="text-center">
+            <div className="text-red-500 mb-4">
+              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.66 1.383-3L13.75 14m-2.5-2h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">Error al cargar la propiedad</h1>
+            <p className="text-gray-600">{error}</p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              Reintentar
+            </button>
           </div>
         </div>
       </Layout>
