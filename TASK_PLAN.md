@@ -77,20 +77,20 @@ inmo-demo/
 
 ### Fase 2: Desarrollo del Frontend
 
-- [ ] 2.1 Crear estructura de componentes base (Header, Footer, Layout)
-- [ ] 2.2 Implementar página de inicio (Landing Page)
-- [ ] 2.3 Crear conjunto de datos ficticios mockData.json
-- [ ] 2.4 Implementar sección Hero con buscador principal
-- [ ] 2.5 Implementar sección de destacados
-- [ ] 2.6 Implementar sección "Por qué elegirnos en Galicia"
-- [ ] 2.7 Implementar buscador/Catálogo Interactivo
-- [ ] 2.8 Implementar sección Asistente IA
-- [ ] 2.9 Implementar formulario de contacto
-- [ ] 2.10 Implementar página de detalle de inmueble
-- [ ] 2.11 Implementar galería de fotos
-- [ ] 2.12 Implementar sección de ubicación
-- [ ] 2.13 Implementar formulario de contacto en ficha de inmueble
-- [ ] 2.14 Implementar diseño responsive
+- [x] 2.1 Crear estructura de componentes base (Header, Footer, Layout)
+- [x] 2.2 Implementar página de inicio (Landing Page)
+- [x] 2.3 Crear conjunto de datos ficticios mockData.json
+- [x] 2.4 Implementar sección Hero con buscador principal
+- [x] 2.5 Implementar sección de destacados
+- [x] 2.6 Implementar sección "Por qué elegirnos en Galicia"
+- [x] 2.7 Implementar buscador/Catálogo Interactivo
+- [x] 2.8 Implementar sección Asistente IA
+- [x] 2.9 Implementar formulario de contacto
+- [x] 2.10 Implementar página de detalle de inmueble
+- [x] 2.11 Implementar galería de fotos
+- [x] 2.12 Implementar sección de ubicación
+- [x] 2.13 Implementar formulario de contacto en ficha de inmueble
+- [x] 2.14 Implementar diseño responsive
 
 ### Fase 3: Desarrollo del Backend
 
