@@ -104,10 +104,10 @@ inmo-demo/
 
 ### Fase 4: Integración y Testing
 
-- [ ] 4.1 Integrar frontend con backend
-- [ ] 4.2 Implementar llamadas a API desde frontend
-- [ ] 4.3 Pruebas unitarias y de integración
-- [ ] 4.4 Pruebas de UI (end-to-end)
+- [x] 4.1 Integrar frontend con backend
+- [x] 4.2 Implementar llamadas a API desde frontend
+- [x] 4.3 Pruebas unitarias y de integración
+- [x] 4.4 Pruebas de UI (end-to-end)
 - [ ] 4.5 Optimización de rendimiento
 - [ ] 4.6 Documentación final
 
