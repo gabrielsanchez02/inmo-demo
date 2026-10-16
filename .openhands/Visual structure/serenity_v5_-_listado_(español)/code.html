@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Immobiliaria X | Luxury Real Estate Galicia</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#71C5EE", // Unified to Galician flag blue
+                        "galicia-blue": "#71C5EE",
+                        "sand-beige": "#F9F7F2",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#131616] font-display">
+<!-- Sticky Navigation Bar -->
+<nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-[#f1f3f3] px-6 lg:px-20 py-4">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="size-8 bg-galicia-blue rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">domain</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#131616]">Immobiliaria <span class="text-galicia-blue">X</span></h1>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center gap-8"><a class="text-sm font-medium hover:text-galicia-blue transition-colors" href="#">Comprar</a><a class="text-sm font-medium hover:text-galicia-blue transition-colors" href="#">Alquilar</a><a class="text-sm font-medium hover:text-galicia-blue transition-colors" href="#">Vender</a><a class="text-sm font-medium hover:text-galicia-blue transition-colors" href="#">Nosotros</a></div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-background-light rounded-lg px-3 py-1.5 border border-transparent focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-gray-400 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-gray-400" placeholder="Buscar ubicaciones..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-opacity-90 text-[#131616] px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm">Listar Propiedad</button>
+<div class="size-10 rounded-full border-2 border-primary/20 p-0.5">
+<img alt="User Profile" class="w-full h-full rounded-full object-cover" data-alt="Close up portrait of a professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfgkUxoHtyFKH3itB_UyrKS9maxjs0SUEPudpttpUDR7gC7uM1HQb91bdehI0WT5_4d8pX0ZZ3VgPnaxypDJyZNACNQJjhA6AVwEJ0KR6501gTU1TmuInuYj-pNqxBrAHqbPBpsGdLSWVNfrkgvG8XQy1NdKXQ8JIfaGKZ7KPiTzLkaXLj-gtwvZVAd0GDjBKZSMulpuq6nah5lekhNJYnS9Yoqz4TXV6EwEHARDgX2RyC_-j5dZNh7jI8o4lD_2r_xQys4PxjwyY"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto px-6 lg:px-20 py-10">
+<!-- Hero-Lite Header -->
+<div class="mb-10">
+<h2 class="text-4xl font-bold text-[#131616] mb-2">Encuentra tu hogar en el corazón de Galicia</h2>
+<p class="text-gray-500 font-light text-lg">Propiedades exquisitas desde las Rías Baixas hasta la Costa da Morte.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Modern Filter Sidebar -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="sticky top-28 bg-sand-beige rounded-xl p-6 border border-[#e8e4d9]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg">Filtros</h3>
+<button class="text-galicia-blue text-xs font-semibold uppercase tracking-wider">Reiniciar</button>
+</div>
+<div class="space-y-6">
+<!-- Location Section -->
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-semibold text-[#131616]"><span class="material-symbols-outlined text-primary">map</span> Ubicación</label>
+<select class="w-full bg-white border-none rounded-lg text-sm p-3 ring-1 ring-black/5 focus:ring-2 focus:ring-primary transition-all"><option>A Coruña</option><option>Vigo</option><option>Santiago de Compostela</option><option>Sanxenxo</option><option>Pontevedra</option></select>
+</div>
+<!-- Property Type Section -->
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-semibold text-[#131616]"><span class="material-symbols-outlined text-primary">home</span> Tipo de Propiedad</label>
+<div class="grid grid-cols-2 gap-2"><button class="px-3 py-2 bg-primary text-xs font-medium rounded-lg">Todo</button><button class="px-3 py-2 bg-white hover:bg-white/50 text-xs font-medium rounded-lg transition-colors">Casa</button><button class="px-3 py-2 bg-white hover:bg-white/50 text-xs font-medium rounded-lg transition-colors">Villa</button><button class="px-3 py-2 bg-white hover:bg-white/50 text-xs font-medium rounded-lg transition-colors">Piso</button></div>
+</div>
+<!-- Price Range Section -->
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-semibold text-[#131616]"><span class="material-symbols-outlined text-primary">payments</span> Rango de Precio</label>
+<input class="w-full accent-primary" max="2000000" min="100000" type="range"/>
+<div class="flex justify-between text-[10px] font-bold text-gray-400 uppercase">
+<span>€100k</span>
+<span>€2M+</span>
+</div>
+</div>
+<!-- Bedrooms Section -->
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-semibold text-[#131616]"><span class="material-symbols-outlined text-primary">bed</span> Dormitorios</label>
+<div class="flex gap-2">
+<button class="size-8 bg-white border border-black/5 rounded flex items-center justify-center text-xs font-bold hover:border-primary">1+</button>
+<button class="size-8 bg-white border border-black/5 rounded flex items-center justify-center text-xs font-bold hover:border-primary">2+</button>
+<button class="size-8 bg-primary border border-transparent rounded flex items-center justify-center text-xs font-bold">3+</button>
+<button class="size-8 bg-white border border-black/5 rounded flex items-center justify-center text-xs font-bold hover:border-primary">4+</button>
+</div>
+</div>
+<!-- Amenities -->
+<div class="space-y-3">
+<label class="flex items-center gap-2 text-sm font-semibold text-[#131616]"><span class="material-symbols-outlined text-primary">verified</span> Servicios</label>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-xs cursor-pointer group"><span class="material-symbols-outlined text-primary">Vistas al Mar</span> Servicios</label>
+<label class="flex items-center gap-2 text-xs cursor-pointer group"><span class="material-symbols-outlined text-primary">Piscina</span> Servicios</label>
+<label class="flex items-center gap-2 text-xs cursor-pointer group"><span class="material-symbols-outlined text-primary">Jardín</span> Servicios</label>
+</div>
+</div>
+<button class="w-full py-3 bg-[#131616] text-white rounded-lg text-sm font-bold mt-4 hover:bg-gray-800 transition-colors">Aplicar Filtros</button>
+</div>
+</div>
+</aside>
+<!-- Property Grid Section -->
+<div class="flex-1">
+<!-- Grid Header -->
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-[#f1f3f3]">
+<p class="text-sm font-medium text-gray-500"><span class="text-[#131616] font-bold">142</span> propiedades encontradas en Galicia</p>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-sm">
+<span class="text-gray-400">Ordenar por:</span>
+<select class="border-none bg-transparent text-[#131616] font-semibold focus:ring-0 p-0 pr-6 text-sm"><option>Más Recientes</option><option>Precio: Menor a Mayor</option><option>Precio: Mayor a Menor</option></select>
+</div>
+<div class="flex gap-1 border border-gray-200 rounded-md p-1">
+<button class="p-1 rounded bg-background-light"><span class="material-symbols-outlined text-sm">grid_view</span></button>
+<button class="p-1 rounded text-gray-400 hover:bg-background-light">Ordenar por:</button>
+</div>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4">
+<img alt="Modern Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern luxury white villa with infinity pool at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHszPiV3Ol1aPcA53PMSd1kTeedDmAh6B_ngjpP1jnJOETTdZAcZDQHf5Ryhqph6k8DUpFpXEdOn7_MqJOd6rFqbu9Akrq5Id3LVTC29fcZUkBRQ9zI8ahF-6Nott6CPGOmx2TtAn7uF6lZ3UvAF3I9DZQgAUdPjDNc41_BKP4AhKmp3VamkXl8Z2VzwcG28t-AWGEwMgLaXL2hyBDeRepw5Z-QVRC9Vy-P3kOnA91RM2GVmNliurslMSitPOmLTMal04ZtgTAw2s"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#131616]">Destacado</div>
+<button class="absolute top-4 right-4 size-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg text-red-500">favorite</span>
+</button>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="text-xl font-bold">€850,000</h4>
+<span class="bg-primary/20 text-[#131616] text-[10px] px-2 py-0.5 rounded font-bold">VENTA</span>
+</div>
+<p class="text-sm font-medium text-[#131616]">Villa Contemporánea Frente al Mar</p>
+<p class="text-xs text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Sanxenxo, Rías Baixas
+                            </p>
+<div class="flex items-center gap-4 pt-2 border-t border-[#f1f3f3]">
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bed</span> 4
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bathtub</span> 3
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">square_foot</span> 320m²
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4">
+<img alt="Galician Stone House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Galician stone house with large garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhXATUGXeq6YkUURkxbQajjcJHZ971J8-4ufrvxmLtRbh0LrEjRNaYUEd9PlJEzCob-RZVqnIYvOtIGRoz_UoUsQMpjWbItyj3aPVVQdpSQVwEFsygX0wmGvhfDUladNqDNMi3emKEnQKXRt7gTt4_Oer8twc93nXmfdIkO9dbwYPmlvIiKJV5P24T17yVNaFNUrJLNTLnqo1ggnnhsyoFU1zlo779PzwKvXiufgnKrECpi2JZaB0PI1RVfO-Fx9TZOsaVRnuRBMo"/>
+<button class="absolute top-4 right-4 size-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="text-xl font-bold">€420,000</h4>
+<span class="bg-primary/20 text-[#131616] text-[10px] px-2 py-0.5 rounded font-bold">VENTA</span>
+</div>
+<p class="text-sm font-medium text-[#131616]">Restauración de Pazo Histórico</p>
+<p class="text-xs text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Ames, Santiago
+                            </p>
+<div class="flex items-center gap-4 pt-2 border-t border-[#f1f3f3]">
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bed</span> 5
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bathtub</span> 2
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">square_foot</span> 450m²
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4">
+<img alt="Modern Flat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Bright modern apartment interior with panoramic city views" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4RamqKI2hYN6amDZ5wyJW7NxuiMdEV7i72wupGkdKudLctMtsw8Qgm73lWnUH8MJEJPSiHhHXcCN4CR5XzPALYVZZLP4gxJA6NBnKQtSLTrQ5cq8SMPzAaS0RfhatE5tbHg5W7Gl6aDK2a2Vx_ztnHa7BC3Km94x7-PeDcvX9tl6jZ27awvxEMKL8vbfHTuaC_HzXK9FSFudyFSqwXgiJLIGeD2Ic92ud0djByjFRK2XFngdaPcr0Ec5FJSaC75FIioMhdsharok"/>
+<button class="absolute top-4 right-4 size-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="text-xl font-bold">€295,000</h4>
+<span class="bg-primary/20 text-[#131616] text-[10px] px-2 py-0.5 rounded font-bold">VENTA</span>
+</div>
+<p class="text-sm font-medium text-[#131616]">Ático con Terraza</p>
+<p class="text-xs text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> A Coruña Center
+                            </p>
+<div class="flex items-center gap-4 pt-2 border-t border-[#f1f3f3]">
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bed</span> 2
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bathtub</span> 2
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">square_foot</span> 110m²
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4">
+<img alt="Beachfront Property" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="White contemporary house directly on a sandy beach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgThuTeSIZ0umUA6qoee05yRgTLBiS-C0SIgBCx6PSMFRSXgjixS1nTI36m2woeuk3eHlca1QDKlxiqGG6U5B0OMPGjKHMqzBWBrVHPBDzfPU73pKUp8MUGjQ4cmjKsTQv5wacytv-30Otecwuh5HnnaT5fUBHEf1Mb4bXkoeg_En3d9B2VYQNn_zsiJ0MZEQJVJCCEq5mqXFV8Gh77MNZyclJEU9tSYupXwmZe804RgscLert1_YTfJzBKal-im1UmcXsCjCW-y8"/>
+<button class="absolute top-4 right-4 size-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="text-xl font-bold">€1,200,000</h4>
+<span class="bg-primary/20 text-[#131616] text-[10px] px-2 py-0.5 rounded font-bold">VENTA</span>
+</div>
+<p class="text-sm font-medium text-[#131616]">Finca de Lujo al Borde del Mar</p>
+<p class="text-xs text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Nigrán, Pontevedra
+                            </p>
+<div class="flex items-center gap-4 pt-2 border-t border-[#f1f3f3]">
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bed</span> 6
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bathtub</span> 5
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">square_foot</span> 540m²
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4">
+<img alt="Modern Suburb House" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Two story modern suburban house with grey facade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOFQIFJG5hPzUqRZ7I6sVDXDvJYrMKwaNxcLIWLYUaZFI11L1zKbIpwvD8dpwAW28ZfBCQ49HB9AEWX0E94SU3pnqN8N1SQVvcujD_dwNjLNH4gEeImpRw89m4TGnXKGHMEsmebmY2rQdOG0EAFQJExaeGAjDti-4U9M6A-ohKv-78lvIzm2T41Q1UZt_BOUIzKzO8k8UPF4pjLUp-X-nwNAnFnJT3HsQ3dVg8F-U4PpA_4-3Nv7wechgC2kj3xNlyIBag-8vFgUU"/>
+<button class="absolute top-4 right-4 size-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="text-xl font-bold">€1,850/mes</h4>
+<span class="bg-primary/20 text-[#131616] text-[10px] px-2 py-0.5 rounded font-bold">ALQUILER</span>
+</div>
+<p class="text-sm font-medium text-[#131616]">Casa Familiar con Piscina</p>
+<p class="text-xs text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Oleiros, A Coruña
+                            </p>
+<div class="flex items-center gap-4 pt-2 border-t border-[#f1f3f3]">
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bed</span> 4
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bathtub</span> 3
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">square_foot</span> 220m²
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl aspect-[4/3] mb-4">
+<img alt="Cabin in forest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Rustic wooden and stone cabin in a lush Galician forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClHo43kBH7DmCXYHAoDpgCsbnLBtNRuFaiOiP-hu0VI2ySnKZht9_CqhQ7Xw_1a9OKm8v-CN6J_Xfb_WQAoVQR8tF3vsho3gaAYBaEg9-jv6I80vjyFWsjZah4sNEseULhHVU_gJVJhoZvPG247iafN5Aylr7LZZ7H8PgjbMvLCa9E6jbNIvv8dZwiPnC_4FUxB-fuBtIrwEoSbLDPAAW3QqjGU3OBHhpzaPeDPWhW9kuD71wEHl4dO2HJizw6nx2q3Hz2lVZyyKU"/>
+<button class="absolute top-4 right-4 size-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="text-xl font-bold">€195,000</h4>
+<span class="bg-primary/20 text-[#131616] text-[10px] px-2 py-0.5 rounded font-bold">VENTA</span>
+</div>
+<p class="text-sm font-medium text-[#131616]">Retiro Rural con Terreno</p>
+<p class="text-xs text-gray-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span> Os Ancares, Lugo
+                            </p>
+<div class="flex items-center gap-4 pt-2 border-t border-[#f1f3f3]">
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bed</span> 2
+                                </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">bathtub</span> 1
+                                    </div>
+<div class="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+<span class="material-symbols-outlined text-base text-primary">square_foot</span> 85m²
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 hover:border-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg bg-primary font-bold">1</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 hover:border-primary transition-colors">2</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 hover:border-primary transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 hover:border-primary transition-colors">12</button>
+<button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 hover:border-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-sand-beige border-t border-[#e8e4d9] mt-20">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-20 py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-galicia-blue rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">domain</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#131616]">Immobiliaria <span class="text-galicia-blue">X</span></h1>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed">La consultora inmobiliaria de lujo líder en Galicia. Unimos el encanto tradicional gallego con la vida de lujo moderna.</p>
+<div class="flex gap-4">
+<a class="size-8 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-galicia-blue transition-colors border border-black/5 shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="size-8 bg-white rounded-full flex items-center justify-center text-gray-400 hover:text-galicia-blue transition-colors border border-black/5 shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Enlaces Rápidos</h5>
+<ul class="space-y-4 text-sm text-gray-500"><li><a class="hover:text-galicia-blue transition-colors" href="#">Ver Propiedades</a></li><li><a class="hover:text-galicia-blue transition-colors" href="#">Colección de Lujo</a></li><li><a class="hover:text-galicia-blue transition-colors" href="#">Vende tu Casa</a></li><li><a class="hover:text-galicia-blue transition-colors" href="#">Carreras</a></li></ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Enlaces Rápidos</h5>
+<ul class="space-y-4 text-sm text-gray-500"><li><a class="hover:text-galicia-blue transition-colors" href="#">Ver Propiedades</a></li><li><a class="hover:text-galicia-blue transition-colors" href="#">Colección de Lujo</a></li><li><a class="hover:text-galicia-blue transition-colors" href="#">Vende tu Casa</a></li><li><a class="hover:text-galicia-blue transition-colors" href="#">Carreras</a></li></ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Enlaces Rápidos</h5>
+<p class="text-xs text-gray-500 mb-4 leading-relaxed">Mantente al día con los últimos listados de propiedades y tendencias del mercado en Galicia.</p>
+<div class="flex flex-col gap-2">
+<input class="w-full bg-white border-none rounded-lg text-xs p-3 ring-1 ring-black/5 focus:ring-2 focus:ring-primary transition-all" placeholder="Tu correo electrónico" type="email"/>
+<button class="w-full py-3 bg-galicia-blue text-white rounded-lg text-xs font-bold hover:bg-opacity-90 transition-all">Suscribirse</button>
+</div>
+</div>
+</div>
+<!-- Bottom Footer -->
+<div class="mt-16 pt-8 border-t border-[#e8e4d9] flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">© 2024 Immobiliaria X. Agencia Inmobiliaria Licenciada en Galicia.</p>
+<div class="flex gap-8"><a class="text-[10px] text-gray-400 font-bold uppercase hover:text-galicia-blue" href="#">Política de Privacidad</a><a class="text-[10px] text-gray-400 font-bold uppercase hover:text-galicia-blue" href="#">Términos de Servicio</a><a class="text-[10px] text-gray-400 font-bold uppercase hover:text-galicia-blue" href="#">Cookies</a></div>
+</div>
+</div>
+</footer>
+</body></html>

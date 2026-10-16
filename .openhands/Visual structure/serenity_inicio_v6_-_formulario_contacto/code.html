@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Immobiliaria X | Find Your Sanctuary in Galicia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#71C5EE",
+                        "background-light": "#f6f7f7",
+                        "background-dark": "#151d1d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#131616] antialiased transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-[#26d9e0]/40 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">home_pin</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#131616] dark:text-white">Immobiliaria X</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Comprar</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Alquilar</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Vender</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sobre Nosotros</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block px-6 py-2 rounded-lg border border-primary text-sm font-semibold hover:bg-primary/10 transition-all border-2">
+                    Contáctanos
+                </button>
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary cursor-pointer hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section with Glassmorphism Search -->
+<section class="relative w-full h-[85vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Scenic Galician coastal landscape with sunset light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACcN8vOqxIU3JWJt04PxqUl8-S7kji0kkOCVzPy66S14n8PfEmh1P-KuO2mpte7IYgpMhMtRbxC8JYOWZ7WWc2-9m4qORkVe1zaZ0DvqmtiymRfwurXnehANJ-1u7jzjXOl6S9e_1GSlzUuZSE8woXA13k4jCF3gjNo42snMeIdvKhJBPlAAoRUgWeosGeH5Jm8sSSboWnboF01SSHapek2dOJkYWvltn2ub_NL-5CGnS3hNi7NzkF1FyOlxM0Fmk0as32J-o_jn4');">
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="relative z-10 w-full max-w-4xl px-6 text-center">
+<h1 class="text-white text-5xl md:text-7xl font-light tracking-tight mb-6">
+                    Encuentra tu <span class="font-bold">Santuario</span> en Galicia
+                </h1>
+<p class="text-white/90 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto">
+                    Vive la experiencia de paisajes impresionantes y casas de piedra tradicionales en la costa atlántica.
+                </p>
+<!-- Glassmorphism Search Bar -->
+<div class="glass-morphism rounded-xl p-4 shadow-2xl flex flex-col md:flex-row items-center gap-3" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(113, 197, 238, 0.3);">
+<div class="flex-1 w-full relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">location_on</span>
+<input class="w-full bg-white/50 border-none rounded-lg pl-12 h-14 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="Buscar por ubicación..." type="text"/>
+</div>
+<div class="flex-1 w-full relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">house</span>
+<select class="w-full bg-white/50 border-none rounded-lg pl-12 h-14 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all appearance-none">
+<option>Tipo de Propiedad</option>
+<option>Pazo (Casa de Piedra)</option>
+<option>Villa Costera</option>
+<option>Apartamento Moderno</option>
+</select>
+</div>
+<button class="w-full md:w-auto px-10 h-14 bg-primary text-[#131616] font-bold rounded-lg hover:brightness-105 shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">search</span>
+                        Buscar
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Properties -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-bold tracking-tight mb-2">Featured Properties</h2>
+<p class="text-gray-500 max-w-md">Our curated selection of the most exclusive and serene homes currently available in Galicia.</p>
+</div>
+<a class="text-primary font-semibold flex items-center gap-2 hover:underline" href="#">
+                    View all listings <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Property 1 -->
+<div class="group bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Luxury coastal villa with ocean view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdTl2ehl_ptlQecaSqByUQVt1x7NDghsG2iHdCo4XESpcv2aKp1KddSdBRDJlQ142LOOIYYjh2Iah02-OTyVRy892EGpd-D-_lQwx1IQPWTxCHchy9JVwKCshWqYDDX_xCVUio2FdDyQLQF3oeK1wtaXA6JW-KBozrz4r6G1h4bwBGjWyq2FkW8QyTjWnDQqdeAjP9wdS_nVDFAq1Yka588aexE0Lgxngll-e4Bq0qcwijQARgV5y0MhgWcjY0O68TgNQjJg4R_ow');"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Premium</div>
+<button class="absolute top-4 right-4 size-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Villa Costera Rías Baixas</h3>
+<span class="text-primary font-bold">€850,000</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">Pontevedra, Galicia</p>
+<div class="flex items-center gap-4 text-xs font-medium text-gray-600 border-t border-gray-100 pt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 4 Hab.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 3 Baños</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 320m²</span>
+</div>
+</div>
+</div>
+<!-- Property 2 -->
+<div class="group bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Historic stone house with modern renovation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4K5mFZd_3re9lXVRWDYETWHONP_Qx024F0Z6kC6j_iaHr-d-SWguVDaBftCWiXVCIfy1VTSzFViyiBHjBj7fFYFUkiDneFSxtuVxO-fz_VBOQhJXb4mxhmexoEeo46aM6-Of7SPE5Tx-oBzTKd3JKkKjswMRim_rarDIZF1tLv6VHsJzpkI4KlbQAimg8kpzC-0NcLS1RHyKZZqeNGyuQ-RLCqQN6hzG6X1hpejyTBgMPIVwQnv44ov_lELn1sOCpo7CyhIKn1Vs');"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Historic</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Pazo Histórico en Lugo</h3>
+<span class="text-primary font-bold">€1,200,000</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">Lugo, Galicia</p>
+<div class="flex items-center gap-4 text-xs font-medium text-gray-600 border-t border-gray-100 pt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 6 Hab.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 4 Baños</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 540m²</span>
+</div>
+</div>
+</div>
+<!-- Property 3 -->
+<div class="group bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern apartment building in city center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKcLLXbgAFJ9Htjix1b9jJNFznhB8aAiA3GW-zOKj0uzgq6PDLXbPVXJWK2pitotTB0KzErY8a0pevI-z1f6MXf2IaMelQrH2OK2X85l8vJmducA018JzOR10xwEKKfjprEYv7i9dOevLpKu83UVDfPayhYsqxAxPQ3o3TQapJ79JgKUWPaReuGpfHwLxVLBUgxgTciHqxc1eoDdt7g13atmJffDI6Xf9jXjaFdlqp47AOvcCAluRh_NCczBBC4l8l4ewbCMQospI');"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Piso Moderno en A Coruña</h3>
+<span class="text-primary font-bold">€320,000</span>
+</div>
+<p class="text-gray-500 text-sm mb-4">A Coruña, Galicia</p>
+<div class="flex items-center gap-4 text-xs font-medium text-gray-600 border-t border-gray-100 pt-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span> 2 Hab.</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span> 2 Baños</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span> 95m²</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Galician Lifestyle Section -->
+<section class="bg-primary/5 py-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<h2 class="text-4xl font-bold tracking-tight mb-6">El Estilo de Vida Gallego</h2>
+<p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Descubre una región donde la naturaleza y la tradición se encuentran en perfecta armonía. Desde las montañas cubiertas de niebla hasta las aguas cristalinas del Atlántico, Galicia ofrece un refugio de paz.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="size-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-primary/10">
+<span class="material-symbols-outlined">waves</span>
+</div>
+<div>
+<h4 class="font-bold">Vistas al Mar</h4>
+<p class="text-gray-500 text-sm">Despierta con el sonido de las olas del Atlántico cada mañana desde tu terraza.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="size-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-primary/10">
+<span class="material-symbols-outlined">castle</span>
+</div>
+<div>
+<h4 class="font-bold">Patrimonio Histórico</h4>
+<p class="text-gray-500 text-sm">Vive en arquitecturas de piedra meticulosamente restauradas que datan de hace siglos.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="size-12 rounded-xl bg-white flex items-center justify-center text-primary shadow-sm border border-primary/10">
+<span class="material-symbols-outlined">nature_people</span>
+</div>
+<div>
+<h4 class="font-bold">Jardines en Terrazas</h4>
+<p class="text-gray-500 text-sm">Disfruta de espacios exteriores verdes, perfectos para la flora local y la relajación.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<img class="rounded-xl w-full h-64 object-cover shadow-lg" data-alt="Galician coastline with green cliffs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArrzhlTRLBuBeKnJ4KD0pmQmVhx-QWYqs7Xn71Aar6HP3jmMFdqnhZgwr-HxSDiJ7t4KTUQqdZsRtaFH5Y5dDBBzfqLawDMWIcTCXn4ln7s8-nMVb3HrN3obg4E0vXZkZf9Zse3uQiJ6JxiA4bY91WJ9dEAihpRTtXHx6XO7pnwst1pQQ5aAEuZsh_KkxR8j9uWfF1-6ajjlqYI9kQxopEMoJvSghUQFXBdUgmfmwXTFjt9n4VcxqwrzCLQ0nNYfeFU-NfU_W92aM"/>
+<img class="rounded-xl w-full h-48 object-cover shadow-lg" data-alt="Traditional stone architecture details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX2WDhlCN58tfr10mSBhJBRhCZoTMxBPraUjW1CLUV-s0qKpsue4zpX_-rG54okOaXRMd7C84uOmH-8yLPV5O3jbawrbWDqW4hKk1F7WQksK_u4766rNlEdQfRtI69kx3ZXntx4bBVeemgHwfjm7Ws0QlqwT6RJvBibtHzsINhCbyjVY2lP0aar6p_CzDSjN3dMdgQd9jwh2jsI69C7Zdsh_tJhzAqZNLZV_C6ZsqY2HShd8fRqkHl2Bn7P3x549h-zf_gD8thDb8"/>
+</div>
+<div class="pt-12 space-y-4">
+<img class="rounded-xl w-full h-48 object-cover shadow-lg" data-alt="Interior of a luxury home in Galicia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ULSCePedduNj_44gEx2fFTBoPstJFB-pStdH4O6WEmO_Ylc-9GhJp_M6YBWSFsDjEjEN_Q5gKez1-Ei06p4YI9xuhvW_GZRAze_EmoqeNjU4cjZcWPt-gK8TH_I8y3IftDAPWmlvQgzU2UCYvsnbZeR0KoFWrceO9UjpOyOgsNnjW-htoOIx4AXwceovP5yIKi_g04XliYMKPDUQUYwByTpEdywus9eVcK98VvgPKl5SH4BmLld-H6ACK0Jm5KvVX-htyYVZ878"/>
+<img class="rounded-xl w-full h-64 object-cover shadow-lg" data-alt="Countryside view with historic houses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdn3GKWEB_euUhjs5EPM8uCAlW-EAY5Eg_e_wZh-N1GbX9-Ed9L56Kwx1yABgNbK6HvVqvnu7oPpFoaKzekwXHmZhFnHDC-eRRKHXBZr832ldJkclcmKfC9zD7Mn8svIaT0gjHHb16JGBXQJJyK1jXeERqfOulMMh15v4mrIifLJJbMXZsP4dZMhplspnrxxuZMx6QJUHBtUSMx7UASx44EMENLjQpzHrPMz259zXB9QvpIz8b-PF3x9O1n7jJow2LIi6GBh2OlhU"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+<div class="flex justify-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-background-dark/30 p-8 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
+<p class="italic text-gray-600 mb-8">"Finding our dream house in Rías Baixas was seamless. Immobiliaria X understood our need for tranquility and found us the perfect coastal retreat."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-cover" data-alt="Client portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRxrxWo17LTZ85LZsQ_Ac5KDctbtnp7Vxa2ySQGFvgNxNh5K891lvZNj9Bb1DguHdagiSB-FzigtCkKdcPWmQpE2DhStr76kmiVjO22OIjdP3VscoX16T9B72fNGvryXmyoTG-ugm25egntxavKVcB_jg5HMng1yi1xYfMRFrDvUaR67kGDFxQl_3kSWP2TE7FRMpFKTLuQzUK4sPuiTtNw3ruFyj9Bx7yAGX0M9dECWOwD47a6z38SHtWomvj7BrFEkE_76sPfSQ')"></div>
+<div>
+<p class="font-bold">Elena Rodriguez</p>
+<p class="text-xs text-gray-400">Purchased in 2023</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark/30 p-8 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
+<p class="italic text-gray-600 mb-8">"The attention to detail in their property selection is unmatched. They don't just sell houses; they sell a way of life that respects Galician heritage."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-cover" data-alt="Client portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJHvA1QcLvGwIuwwXt1_lLZ6voyeSX-9Z4CJKW15hIyxruMzMAAutoJspUhtCOArIYs_HFmKgbESlbkY_vaV-na9tKS07-cijuyOEWHHT7pqM8Sj3sjMKHqMQ01tIOVZkpS2jiuxLysa6sa3dPMP_Rul6ELrXybRJXKnfwVkPQdmLOf5S2yT21T9ec3BDoujZPOwNv4oWSf9uY_640Y1qJqiAWN6T_t-53GnH_xCYmRRBrkKtF_udVKPw2_E8UGUopl4doert_82k')"></div>
+<div>
+<p class="font-bold">Julian Schmidt</p>
+<p class="text-xs text-gray-400">Purchased in 2022</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark/30 p-8 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
+<p class="italic text-gray-600 mb-8">"Expert guidance from day one. As an international buyer, I felt supported throughout the entire legal process of buying a historic Pazo."</p>
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-cover" data-alt="Client portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCX9VVaLKlCSo3kL9rZ9Gu7I78zVPbxaWXpH7PAyfDwb5mYLPPzZURd3TdwWe4H9XFzMnrQ6GKSSO1dO5FQegFJvlWlYdf-H8O7Et2WJIT3z2G3jDBUQqICLfoWPRZrkCkm2ewJ52fpCfIbiUnkLIJHVdO3AFa5iOcgfu0YpwilcI9RP4Wd3o1hrkvQa41d5ox0TsxQzbCJPpfeSMlT6e6csTx8kXe5IbA7KT_49HOe_mTGTwLTyKq00fymmL0I8LIiYxHW5_GiJ1Y')"></div>
+<div>
+<p class="font-bold">Sarah Williams</p>
+<p class="text-xs text-gray-400">Purchased in 2024</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="max-w-7xl mx-auto px-6 pb-24">
+<div class="bg-background-dark text-white rounded-3xl relative overflow-hidden flex"><div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDG9IcB4wqM3yugkY_nSTOvFXCwnwUbck07hs5giKx0yp0K9kjfJgi_WoGLLMmhNUYgYUxxRtleZxmQDKpYOINXRk8IP3k4RUWiunUUASBrKHXu8Aj0BBns0j5zLP8FHCwy9d--_tbjEElp7kJuWTA3E2ef56ukb00jcFH6L__ZhlRXtTjTDonraQQ2kCxdJHAzcIbAJDtwMsNABwKv7fXP435pf8sJOZi7cF9MbakGPe4FPdB-Wd0ciPVqswlARPzZ8TuStlr93I');"></div>
+<div class="relative z-10 w-full flex flex-col md:flex-row min-h-[500px]">
+<div class="w-full md:w-1/3 bg-[#8ca08e]/30 backdrop-blur-md p-10 flex flex-col justify-between text-left">
+<div>
+<h2 class="text-3xl font-bold mb-4 text-white">Consulta Privada</h2>
+<p class="text-gray-200 text-sm leading-relaxed">
+                Comience hoy mismo su viaje hacia la propiedad de sus sueños. Nuestros asesores están a su disposición.
+            </p>
+</div>
+<div class="space-y-4 pt-8">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="text-sm">+34 981 123 456</span>
+</div>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-sm">hello@immobiliaria-x.com</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3 bg-white p-10 flex flex-col justify-center">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+<div class="flex flex-col gap-1">
+<label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Nombre Completo</label>
+<input class="border-0 border-b border-gray-200 focus:ring-0 focus:border-primary py-2 text-sm text-gray-800 placeholder:text-gray-300" placeholder="Johnathan Sterling" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Correo Electrónico</label>
+<input class="border-0 border-b border-gray-200 focus:ring-0 focus:border-primary py-2 text-sm text-gray-800 placeholder:text-gray-300" placeholder="sterling@private.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Interés</label>
+<select class="border-0 border-b border-gray-200 focus:ring-0 focus:border-primary py-2 text-sm text-gray-800">
+<option>Investment Advisory</option>
+<option>Property Tour</option>
+<option>General Inquiry</option>
+</select>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Su Mensaje</label>
+<textarea class="border-0 border-b border-gray-200 focus:ring-0 focus:border-primary py-2 text-sm text-gray-800 placeholder:text-gray-300 resize-none" placeholder="¿Cómo podemos ayudarle?" rows="3"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-lg hover:brightness-105 transition-all uppercase tracking-widest text-sm shadow-lg shadow-primary/20" type="submit">
+                    Solicitar Consulta
+                </button>
+</div>
+</form>
+</div>
+</div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-white/5 py-16">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">home_pin</span>
+<h2 class="text-xl font-bold tracking-tight">Immobiliaria X</h2>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Tu socio de confianza para encontrar propiedades exclusivas en los rincones más serenos de Galicia. Durante más de 20 años, hemos conectado a personas con sus santuarios ideales.
+                </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full bg-gray-50 dark:bg-white/5 flex items-center justify-center text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+<a class="size-10 rounded-full bg-gray-50 dark:bg-white/5 flex items-center justify-center text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400">Enlaces Rápidos</h4>
+<ul class="space-y-4 text-sm text-gray-600">
+<li><a class="hover:text-primary transition-colors" href="#">Últimas Propiedades</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Vende tu Casa</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nuestro Equipo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Noticias y Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400">Ubicaciones</h4>
+<ul class="space-y-4 text-sm text-gray-600">
+<li><a class="hover:text-primary transition-colors" href="#">A Coruña</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Lugo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ourense</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pontevedra</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-gray-400">Contáctanos</h4>
+<ul class="space-y-4 text-sm text-gray-600">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>Calle de la Marina 12,<br/>A Coruña, Galicia, Spain</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span>+34 981 123 456</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>hello@immobiliaria-x.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-16 mt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+<p>© 2024 Immobiliaria X. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Política de Privacidad</a>
+<a class="hover:text-primary" href="#">Términos de Servicio</a>
+<a class="hover:text-primary" href="#">Configuración de Cookies</a>
+</div>
+</div>
+</footer>
+</body></html>
