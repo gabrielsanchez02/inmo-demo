@@ -1,43 +1,20 @@
-// This is your Prisma schema file,
-//
-// Learn more about it at https://prismlang.github.io/prisma-docs/main/core/schema
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
 
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
-}
 
 model Property {
-  id        Int      @id @default(autoincrement())
-  title     String
+  id          String   @id @default(uuid())
+  title       String
   description String
-  price     Int
-  type      String   // "house", "apartment", "cottage", "land"
-  operation String // "sale", "rent"
-  province  String
-  city      String
-  bedrooms  Int
-  bathrooms Int
-  area      Int
-  image     String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  leads     Lead[]
-}
-
-model Lead {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String
-  phone     String
-  message   String
-  propertyId  Int?
-  property  Property @relation(fields: [propertyId], references: [id])
-  status    String @default("new") // "new", "contacted", "visit_scheduled", "discarded"
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  price       Float
+  location    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
