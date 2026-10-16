@@ -23,6 +23,7 @@ Desarrollar software de forma limpia y controlada, manteniendo el contexto por d
 - Nunca cargues archivos grandes completos, lockfiles, node_modules ni logs largos.
 - Usa siempre: `head`, `tail`, `grep -n`, `sed -n 'X,Yp'` y rangos de líneas.
 - Cita código solo con formato `path:line`.
+- No ejecutes diagnósticos masivos. No reintentes ni entres en loops de pruebas
 - Después de cada fase importante, resume el estado actual en máximo 8-10 líneas.
 - Si el contexto se acerca al límite, puedes sugerir commits por [ingresar-razon], cierra lo que estes trabajando y di:
   "Contexto alto. Resumo el estado y continúo solo con lo esencial."
