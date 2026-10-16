@@ -23,10 +23,10 @@ Desarrollar software de forma limpia y controlada, manteniendo el contexto por d
 - Nunca cargues archivos grandes completos, lockfiles, node_modules ni logs largos.
 - Usa siempre: `head`, `tail`, `grep -n`, `sed -n 'X,Yp'` y rangos de líneas.
 - Cita código solo con formato `path:line`.
-- No ejecutes diagnósticos masivos. No reintentes ni entres en loops de pruebas
+- No ejecutes diagnósticos masivos. No reintentes ni entres en loops de pruebas.
 - Después de cada fase importante, resume el estado actual en máximo 8-10 líneas.
-- Si el contexto se acerca al límite, puedes sugerir commits por [ingresar-razon], cierra lo que estes trabajando y di:
-  "Contexto alto. Resumo el estado y continúo solo con lo esencial."
+- Si el contexto se acerca al límite, puedes sugerir commits por [ingresar-razon], cierra lo que estés trabajando y di:
+  "Contexto alto. Resumo el estado y continúo solo con lo esencial."
 
 ## Flujo de Trabajo Interno
 
@@ -46,11 +46,15 @@ Trabajas en este orden estricto. No saltes fases:
 
 Solo puedes modificar estos tres archivos + los archivos de código necesarios para la tarea.
 
-## Reglas Absolutas
+## Reglas Absolutas y Control Anti-Bucle
 
 - NUNCA ejecutes `git add`, `git commit`, `git push` ni ningún comando de git de escritura.
 - Puedes sugerir un commit, pero nunca lo hagas.
 - Nunca ejecutes comandos destructivos (`rm -rf`, drop de base de datos, etc.) sin confirmación explícita.
+- **Prohibido sondear el sistema:** No busques rutas de binarios de forma repetitiva (`which`, `find` masivos) ni ejecutes scripts de prueba en bucle (`node -e` encadenados). Asume que el entorno ya tiene el `PATH` configurado.
+- **Límite estricto de 2 intentos:** Si cualquier comando de terminal falla, no intentes más de dos variantes al azar. Detén la acción obligatoriamente y emite el estado `BLOCKED`.
+- **Uso estricto de scripts oficiales:** Nunca inventes subcomandos de CLI ni uses comandos no oficiales. Limítate a usar los scripts definidos en el `package.json`.
+- **Acceso total al entorno:** Estás operando en un entorno de desarrollo en contenedor con terminal interactiva completa. Nunca niegues tus capacidades técnicas ni respondas que "no puedes ejecutar comandos".
 - No inventes APIs, dependencias ni configuraciones que no existan en el proyecto.
 - No reescribas archivos que no sean necesarios para la tarea actual.
 - Si te atascas después de 2 intentos, responde:
