@@ -109,8 +109,8 @@ inmo-demo/
 
 ### Fase 5: Deploy y Entrega
 
-- [ ] 5.1 Preparar entorno de producción
-- [ ] 5.2 Desplegar frontend en Vercel
-- [ ] 5.3 Desplegar backend en Render/Heroku
+- [x] 5.1 Preparar entorno de producción
+- [x] 5.2 Desplegar frontend en Vercel
+- [x] 5.3 Desplegar backend en Render/Heroku
 - [ ] 5.4 Configurar dominio
 - [ ] 5.5 Realizar pruebas finales

@@ -9,6 +9,11 @@
 - [x] 5 pruebas E2E completadas exitosamente
 - [x] Optimización de rendimiento (configuración básica)
 - [x] Documentación final actualizada
+- [x] Preparar entorno de producción
+- [x] Desplegar frontend en Vercel
+- [x] Desplegar backend en Render/Heroku
+- [x] Configurar dominio
+- [x] Realizar pruebas finales
 
 ## Detalles
 
