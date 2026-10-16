@@ -12,77 +12,95 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-r from-blue-800 to-blue-600 text-white">
-      <div className="absolute inset-0 bg-black opacity-30"></div>
-      <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Encuentra tu Hogar Ideal en Galicia
+    <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block px-4 py-1 bg-blue-600/20 rounded-full mb-6 backdrop-blur-sm border border-blue-500/30">
+            <span className="text-sm font-medium text-blue-100">¡Encuentra tu hogar ideal!</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Encuentra tu <span className="text-blue-300">Hogar Ideal</span> en Galicia
           </h1>
-          <p className="text-xl mb-10 opacity-90">
+          
+          <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-blue-100 opacity-90 leading-relaxed">
             Descubre una amplia selección de propiedades en las mejores zonas de Galicia
           </p>
           
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-xl p-6 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div className="md:col-span-2">
-                <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-1">
-                  Ciudad o Provincia
-                </label>
-                <input
-                  type="text"
-                  id="search"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Ej: Vigo, Santiago, A Coruña"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-8 border border-white/20">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="md:col-span-2">
+                  <label htmlFor="search" className="block text-sm font-medium text-blue-100 mb-2">
+                    Ciudad o Provincia
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="search"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      placeholder="Ej: Vigo, Santiago, A Coruña"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white placeholder-blue-200 backdrop-blur-sm transition-all duration-300"
+                    />
+                    <div className="absolute right-3 top-3 text-blue-200">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="type" className="block text-sm font-medium text-blue-100 mb-2">
+                    Tipo de Propiedad
+                  </label>
+                  <select
+                    id="type"
+                    value={propertyType}
+                    onChange={(e) => setPropertyType(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white backdrop-blur-sm transition-all duration-300"
+                  >
+                    <option value="" className="text-gray-800">Todos</option>
+                    <option value="house" className="text-gray-800">Casa</option>
+                    <option value="apartment" className="text-gray-800">Piso</option>
+                    <option value="cottage" className="text-gray-800">Casa Rural</option>
+                    <option value="land" className="text-gray-800">Parcela</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="operation" className="block text-sm font-medium text-blue-100 mb-2">
+                    Operación
+                  </label>
+                  <select
+                    id="operation"
+                    value={operation}
+                    onChange={(e) => setOperation(e.target.value)}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-white backdrop-blur-sm transition-all duration-300"
+                  >
+                    <option value="" className="text-gray-800">Todas</option>
+                    <option value="sale" className="text-gray-800">Venta</option>
+                    <option value="rent" className="text-gray-800">Alquiler</option>
+                  </select>
+                </div>
               </div>
               
-              <div>
-                <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-1">
-                  Tipo de Propiedad
-                </label>
-                <select
-                  id="type"
-                  value={propertyType}
-                  onChange={(e) => setPropertyType(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              <div className="mt-4">
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl"
                 >
-                  <option value="">Todos</option>
-                  <option value="house">Casa</option>
-                  <option value="apartment">Piso</option>
-                  <option value="cottage">Casa Rural</option>
-                  <option value="land">Parcela</option>
-                </select>
+                  Buscar Propiedades
+                </button>
               </div>
-              
-              <div>
-                <label htmlFor="operation" className="block text-sm font-medium text-gray-700 mb-1">
-                  Operación
-                </label>
-                <select
-                  id="operation"
-                  value={operation}
-                  onChange={(e) => setOperation(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="">Todas</option>
-                  <option value="sale">Venta</option>
-                  <option value="rent">Alquiler</option>
-                </select>
-              </div>
-            </div>
-            
-            <div className="mt-6">
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300"
-              >
-                Buscar Propiedades
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>
