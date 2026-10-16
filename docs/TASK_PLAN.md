@@ -104,13 +104,13 @@ inmo-demo/
 - [x] 4.2 Implementar llamadas a API desde frontend
 - [x] 4.3 Pruebas unitarias y de integración
 - [x] 4.4 Pruebas de UI (end-to-end)
-- [ ] 4.5 Optimización de rendimiento
-- [ ] 4.6 Documentación final
+- [x] 4.5 Optimización de rendimiento
+- [x] 4.6 Documentación final
 
 ### Fase 5: Deploy y Entrega
 
-- [ ] 5.1 Preparar entorno de producción
-- [ ] 5.2 Desplegar frontend en Vercel
-- [ ] 5.3 Desplegar backend en Render/Heroku
+- [x] 5.1 Preparar entorno de producción
+- [x] 5.2 Desplegar frontend en Vercel
+- [x] 5.3 Desplegar backend en Render/Heroku
 - [ ] 5.4 Configurar dominio
 - [ ] 5.5 Realizar pruebas finales

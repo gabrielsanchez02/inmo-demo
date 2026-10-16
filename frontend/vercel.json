@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "build": {
+    "command": "npm run build",
+    "directory": "frontend"
+  },
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_API_URL": "https://your-backend-url.com/api"
+  }
+}

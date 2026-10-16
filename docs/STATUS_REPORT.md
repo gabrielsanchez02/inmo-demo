@@ -49,8 +49,8 @@ El proyecto InmoDemo ha avanzado significativamente desde su configuración inic
 - [x] Implementar llamadas a API desde frontend - ✅ (Implementado)
 - [x] Pruebas unitarias y de integración - ✅ (Implementado)
 - [x] Pruebas de UI (end-to-end) - ✅ (Implementado)
-- [ ] Optimización de rendimiento - ❌ (Pendiente)
-- [ ] Documentación final - ❌ (Pendiente)
+- [x] Optimización de rendimiento - ✅ (Implementado)
+- [x] Documentación final - ✅ (Implementado)
 
 ### Fase 5: Deploy y Entrega
 **Estado actual: No iniciado**
