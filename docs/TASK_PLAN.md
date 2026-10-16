@@ -104,8 +104,8 @@ inmo-demo/
 - [x] 4.2 Implementar llamadas a API desde frontend
 - [x] 4.3 Pruebas unitarias y de integración
 - [x] 4.4 Pruebas de UI (end-to-end)
-- [ ] 4.5 Optimización de rendimiento
-- [ ] 4.6 Documentación final
+- [x] 4.5 Optimización de rendimiento
+- [x] 4.6 Documentación final
 
 ### Fase 5: Deploy y Entrega
 

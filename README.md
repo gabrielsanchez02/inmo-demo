@@ -24,6 +24,17 @@ Este es el repositorio para el MVP de la web inmobiliaria en Galicia.
    npm run dev
    ```
 
+3. Para ejecutar pruebas E2E con Playwright:
+   ```bash
+   # En una terminal separada, iniciar el frontend
+   cd frontend
+   npm run dev
+   
+   # En otra terminal, ejecutar las pruebas E2E
+   cd ..
+   npx playwright test
+   ```
+
 ## Plan de Desarrollo
 
 Consultar el archivo [docs/TASK_PLAN.md](docs/TASK_PLAN.md) para ver el plan detallado de implementación.

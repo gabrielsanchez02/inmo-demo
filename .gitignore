@@ -2,13 +2,18 @@
 /node_modules
 /.pnp
 .pnp.js
+/frontend/node_modules
 
 # testing
 /coverage
+/playwright-report
+/test-results
 
 # build
 /dist
 /build
+/frontend/dist
+/frontend/build
 
 # environment
 .env
@@ -17,10 +22,7 @@
 # misc
 .DS_Store
 *.log
-
-# database
-/db.sqlite
-/db.sqlite-journal
+*.sqlite
 
 # IDE
 .vscode/
