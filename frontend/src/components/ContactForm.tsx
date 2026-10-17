@@ -47,14 +47,14 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+    <div className="bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100" data-testid="contact-form">
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Contacta con nosotros</h3>
         <p className="text-gray-600">Completa el formulario y nos pondremos en contacto contigo pronto</p>
       </div>
       
       {submitSuccess ? (
-        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-4 rounded-lg mb-6">
+        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-4 rounded-lg mb-6" data-testid="success-message">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
       ) : null}
       
       {error ? (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-4 rounded-lg mb-6">
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-4 rounded-lg mb-6" data-testid="error-message">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
