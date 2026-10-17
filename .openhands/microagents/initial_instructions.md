@@ -33,6 +33,7 @@ Si el mensaje del usuario empieza con `@architect`, `@developer`, `@qa` o `@orch
 
 - Nunca cargues archivos grandes completos, lockfiles, `node_modules` ni logs largos.
 - Usa `head`, `tail`, `grep -n`, `sed -n 'X,Yp'` y rangos de líneas. Limita la salida de los comandos con `| tail -n 40`.
+- NUNCA ejecutes `npm run dev` ni ningún servidor en primer plano: bloquea la terminal. Siempre con `nohup ... > /tmp/dev.log 2>&1 &` y comprueba con `tail -n 15 /tmp/dev.log` y `curl -sI`.
 - Cita código como `path:line`, sin pegarlo en el chat.
 - No abras capturas ni imágenes: no puedes verlas.
 - Tras cada fase importante, resume el estado en `docs/PROGRESS.md` (máx. 10 líneas) y, si la conversación ya es larga, sugiere al usuario abrir un chat nuevo.
@@ -70,14 +71,21 @@ Archivos de estado: `docs/PLAN.md`, `docs/PROGRESS.md`, `docs/REVIEW.md`. Fuera 
 
 - Haz solo lo que pide la tarea. Nada de despliegues (Vercel, Render, Heroku), configuración de hosting ni documentación extra no solicitada.
 - No inventes APIs, dependencias, subcomandos de CLI ni configuraciones. Usa solo los scripts definidos en `package.json`.
-- No reescribas archivos que no sean necesarios y prefiere editar los existentes a crear muchos nuevos.
-- No cambies `package.json` ni añadas dependencias sin que el usuario lo pida.
-- Si falta una dependencia que YA está declarada en `package.json`, puedes ejecutar `npm install` (sin argumentos) en esa carpeta. Añadir dependencias nuevas o cambiar `package.json` requiere permiso del usuario.
-- Si Vite muestra un error de importación, lee `tail -n 20 /tmp/dev.log` y repórtalo. No borres ni reinstales `node_modules` por tu cuenta.
+- No reescribas archivos innecesariamente; prefiere editar los existentes a crear muchos nuevos.
+- No cambies `package.json` ni añadas dependencias sin permiso del usuario.
+- Un error de sintaxis o de compilación (ej. "Unexpected token") se soluciona EDITANDO el archivo y la línea indicada. NUNCA se arregla instalando paquetes ni ejecutando `npm install --save-dev`.
+- Solo si Vite indica que no encuentra un módulo que YA está declarado en `package.json`, puedes ejecutar `npm install` (sin argumentos) en esa carpeta.
+- Tras un error de compilación o importación:
+  1) Revisa el log con `tail -n 20 /tmp/dev.log`.
+  2) Lee la línea del error con `sed -n 'X,Yp'`.
+  3) Edita el archivo.
+- NUNCA uses `npm run build` para diagnosticar, ni borres o reinstales `node_modules` por tu cuenta.
 
 ## Reglas absolutas y control anti-bucle
 
 - NUNCA ejecutes comandos de git que escriban (`add`, `commit`, `push`, `reset`, etc.). Puedes sugerir un commit, pero no lo hagas.
+- Nunca repitas un comando idéntico. Si dos comandos seguidos no devuelven salida, o repites el mismo, la terminal está bloqueada: responde `BLOCKED: terminal bloqueada, el usuario debe abrir un chat nuevo` y para.
+- Con la terminal bloqueada NO envíes C-c, C-z ni C-d en bucle, ni uses `kill -9`, `killall` o `pkill` masivos. Solo se permite un `pkill -f vite`.
 - Nunca ejecutes comandos destructivos (`rm -rf`, drop de base de datos, borrar carpetas como `src` o `node_modules`) sin confirmación explícita del usuario.
 - Nunca expongas secretos ni credenciales.
 - No sondees el sistema: nada de `which` o `find` masivos, ni scripts de prueba encadenados.
