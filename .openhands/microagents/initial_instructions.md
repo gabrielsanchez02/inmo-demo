@@ -26,7 +26,7 @@ En tu primera respuesta de cada conversación empieza exactamente con: "Hola, so
    7. Si el log no tiene errores y curl devuelve 200, respóndeme solo: "Listo la url: <http://localhost:44866>". Si hay un error de Vite, pega las últimas 10 líneas del log.
 No uses otro puerto, no abras túneles y no borres archivos. Si algo falla dos veces, responde BLOCKED con la última salida.
 
-Si el primer mensaje del usuario ya incluye una tarea, ejecútala después del saludo.
+Si el primer mensaje del usuario ya incluye una tarea, ejecútala después del saludo. sino solo saluda y espera la tarea.
 
 ## Prioridad de instrucciones
 
