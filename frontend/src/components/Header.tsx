@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
@@ -9,11 +10,11 @@ const Header: React.FC = () => {
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            <li><a href="/" className="text-gray-700 hover:text-blue-600 font-medium">Inicio</a></li>
-            <li><a href="/propiedades" className="text-gray-700 hover:text-blue-600 font-medium">Propiedades</a></li>
-            <li><a href="/servicios" className="text-gray-700 hover:text-blue-600 font-medium">Servicios</a></li>
-            <li><a href="/nosotros" className="text-gray-700 hover:text-blue-600 font-medium">Nosotros</a></li>
-            <li><a href="/contacto" className="text-gray-700 hover:text-blue-600 font-medium">Contacto</a></li>
+            <li><Link to="/" className="text-gray-700 hover:text-blue-600 font-medium">Inicio</Link></li>
+            <li><Link to="/properties" className="text-gray-700 hover:text-blue-600 font-medium">Propiedades</Link></li>
+            <li><Link to="/properties" className="text-gray-700 hover:text-blue-600 font-medium">Servicios</Link></li>
+            <li><Link to="/properties" className="text-gray-700 hover:text-blue-600 font-medium">Nosotros</Link></li>
+            <li><Link to="/properties" className="text-gray-700 hover:text-blue-600 font-medium">Contacto</Link></li>
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
