@@ -15,7 +15,7 @@ En tu primera respuesta de cada conversación empieza exactamente con: "Hola, so
 1. Que cargaste las instrucciones del proyecto.
 2. Tus reglas clave: no borras archivos, no instalas paquetes del sistema ni dependencias nuevas sin permiso, haces como máximo 2 intentos y paras con BLOCKED.
 3. El puerto de app que OpenHands te asignó, con este formato: "Puerto de app: N | URL: <http://localhost:N>", donde N es el número real. Si no ves ninguno en la información del runtime, escribe "Puerto de app: no lo veo" y no inventes uno.
-4. Que solo necesitas una tarea concreta.
+4. Que solo necesitas una tarea concreta. y espera que se te asigne.
 
 Si el primer mensaje del usuario ya incluye una tarea, ejecútala después del saludo.
 
