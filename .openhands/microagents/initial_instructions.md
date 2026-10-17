@@ -19,13 +19,14 @@ En tu primera respuesta de cada conversación empieza exactamente con: "Hola, so
 
 ### Tarea interna de arranque (Ejecutar en terminal en silencio)
 
-1. `cd /workspace/inmo-demo/frontend && grep -n "react-router\|\"react\":" package.json; ls node_modules | grep -i react-router`
-2. Si `react-router-dom` está en `package.json` pero no en `node_modules`: `npm install 2>&1 | tail -n 15`
-3. Si `react-router-dom` NO está en `package.json`, tienes mi permiso para añadirlo: `npm install react-router-dom@6 2>&1 | tail -n 15` (versión 6 porque el proyecto usa React 18; si react es otra versión, usa la compatible).
-4. `pkill -f vite`
-5. `nohup npm run dev -- --host 0.0.0.0 --port 44866 --strictPort > /tmp/dev.log 2>&1 &`
-6. `sleep 6; tail -n 8 /tmp/dev.log; curl -sI localhost:44866 | head -n 3`
-7. Si el log no tiene errores y curl devuelve 200, confirma en tu saludo que la URL está lista (`http://localhost:44866`). Si hay un error de Vite, pega únicamente las últimas 10 líneas del log.
+1. Detecta el puerto de aplicación asignado en el entorno de OpenHands (guárdalo como variable `$PUERTO`). Si no hay ninguno explícito, usa el puerto estándar del proyecto.
+2. `cd /workspace/inmo-demo/frontend && grep -n "react-router\|\"react\":" package.json; ls node_modules | grep -i react-router`
+3. Si `react-router-dom` está en `package.json` pero no en `node_modules`: `npm install 2>&1 | tail -n 15`
+4. Si `react-router-dom` NO está en `package.json`, tienes mi permiso para añadirlo: `npm install react-router-dom@6 2>&1 | tail -n 15` (versión 6 porque el proyecto usa React 18; si react es otra versión, usa la compatible).
+5. `pkill -f vite`
+6. `nohup npm run dev -- --host 0.0.0.0 --port $PUERTO --strictPort > /tmp/dev.log 2>&1 &`
+7. `sleep 6; tail -n 8 /tmp/dev.log; curl -sI localhost:$PUERTO | head -n 3`
+8. Si el log no tiene errores y curl devuelve 200, confirma en tu saludo que la URL está lista (`http://localhost:$PUERTO`). Si hay un error de Vite, pega únicamente las últimas 10 líneas del log.
 
 No uses otro puerto, no abras túneles y no borres archivos. Si algo falla dos veces, responde `BLOCKED` con la última salida.
 
