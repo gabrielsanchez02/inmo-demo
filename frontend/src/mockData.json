@@ -11,7 +11,7 @@
     "bedrooms": 3,
     "bathrooms": 2,
     "area": 120,
-    "image": "/images/piso-vigo.jpg"
+    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "bedrooms": 4,
     "bathrooms": 2,
     "area": 180,
-    "image": "/images/casa-rural.jpg"
+    "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@
     "bedrooms": 2,
     "bathrooms": 1,
     "area": 90,
-    "image": "/images/piso-sanxenxo.jpg"
+    "image": "https://images.unsplash.com/photo-1523755231516-e4526019000d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "bedrooms": 3,
     "bathrooms": 2,
     "area": 220,
-    "image": "/images/chalet-vilagarcia.jpg"
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 5,
@@ -67,7 +67,7 @@
     "bedrooms": 2,
     "bathrooms": 2,
     "area": 110,
-    "image": "/images/piso-lujo.jpg"
+    "image": "https://images.unsplash.com/photo-1522708323510-d24dbb6b0267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
   },
   {
     "id": 6,
@@ -81,6 +81,6 @@
     "bedrooms": 0,
     "bathrooms": 0,
     "area": 1000,
-    "image": "/images/parcela-costada.jpg"
+    "image": "https://images.unsplash.com/photo-1612287230202-1ff11489d71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
   }
 ]

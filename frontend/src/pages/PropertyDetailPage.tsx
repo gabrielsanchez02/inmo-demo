@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { Property } from '../types';
-import { propertyService } from '../services/propertyService';
+import { mockPropertyService } from '../services/mockPropertyService';
 
 const PropertyDetailPage: React.FC = () => {
   const [property, setProperty] = useState<Property | null>(null);
@@ -16,7 +16,7 @@ const PropertyDetailPage: React.FC = () => {
         setLoading(true);
         // En una aplicación real, se obtendría el ID desde las rutas
         // Por ahora, usamos el primer ID disponible
-        const fetchedProperty = await propertyService.getPropertyById(1);
+        const fetchedProperty = await mockPropertyService.getPropertyById(1);
         setProperty(fetchedProperty);
       } catch (err) {
         console.error('Error al obtener la propiedad:', err);
