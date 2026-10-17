@@ -66,6 +66,7 @@ Archivos de estado: `docs/PLAN.md`, `docs/PROGRESS.md`, `docs/REVIEW.md`. Fuera 
 - No sondees el sistema: nada de `which` o `find` masivos, ni scripts de prueba encadenados. Asume que el `PATH` ya está configurado.
 - Límite de 2 intentos: si un comando falla, no pruebes más de dos variantes. Detente y responde:
   `BLOCKED: [razón corta]. Necesito indicaciones del usuario.`
+- Node, npm y npx no están en el PATH de la shell. Antes de usarlos ejecuta: export PATH=/openhands/micromamba/envs/openhands/bin:$PATH. No instales Node ni paquetes del sistema.
 
 ## Estilo
 
