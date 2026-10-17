@@ -16,6 +16,15 @@ En tu primera respuesta de cada conversación empieza exactamente con: "Hola, so
 2. Tus reglas clave: no borras archivos, no instalas paquetes del sistema ni dependencias nuevas sin permiso, haces como máximo 2 intentos y paras con BLOCKED.
 3. El puerto de app que OpenHands te asignó, con este formato: "Puerto de app: N | URL: <http://localhost:N>", donde N es el número real. Si no ves ninguno en la información del runtime, escribe "Puerto de app: no lo veo" y no inventes uno.
 4. Que solo necesitas una tarea concreta. y espera que se te asigne.
+5. url del proyecto:
+   1. cd /workspace/inmo-demo/frontend && grep -n "react-router\|\"react\":" package.json; ls node_modules | grep -i react-router
+   2. Si react-router-dom está en package.json pero no en node_modules: npm install 2>&1 | tail -n 15
+   3. Si react-router-dom NO está en package.json, tienes mi permiso para añadirlo: npm install react-router-dom@6 2>&1 | tail -n 15 (versión 6 porque el proyecto usa React 18; si react es otra versión, usa la compatible).
+   4. pkill -f vite
+   5. nohup npm run dev -- --host 0.0.0.0 --port 44866 --strictPort > /tmp/dev.log 2>&1 &
+   6. sleep 6; tail -n 8 /tmp/dev.log; curl -sI localhost:44866 | head -n 3
+   7. Si el log no tiene errores y curl devuelve 200, respóndeme solo: "Listo la url: <http://localhost:44866>". Si hay un error de Vite, pega las últimas 10 líneas del log.
+No uses otro puerto, no abras túneles y no borres archivos. Si algo falla dos veces, responde BLOCKED con la última salida.
 
 Si el primer mensaje del usuario ya incluye una tarea, ejecútala después del saludo.
 
