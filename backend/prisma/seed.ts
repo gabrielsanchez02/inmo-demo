@@ -5,7 +5,7 @@ import { Property } from '../src/models/Property';
 async function main() {
   console.log('Iniciando sembrado de datos...');
   
-  // Datos de ejemplo para propiedades
+  // Datos de ejemplo para propiedades con URLs de Unsplash
   const properties: Property[] = [
     {
       id: 1,
@@ -19,7 +19,7 @@ async function main() {
       bedrooms: 3,
       bathrooms: 2,
       area: 150,
-      image: "/images/casa1.jpg",
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -35,7 +35,7 @@ async function main() {
       bedrooms: 2,
       bathrooms: 1,
       area: 80,
-      image: "/images/depto1.jpg",
+      image: "https://images.unsplash.com/photo-1522708323538-e12e92251e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -51,7 +51,7 @@ async function main() {
       bedrooms: 2,
       bathrooms: 1,
       area: 100,
-      image: "/images/cabaña1.jpg",
+      image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
       createdAt: new Date(),
       updatedAt: new Date()
     }

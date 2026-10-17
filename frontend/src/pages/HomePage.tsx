@@ -5,7 +5,7 @@ import FeaturedProperties from '../components/FeaturedProperties';
 import WhyChooseUs from '../components/WhyChooseUs';
 import BackendStatus from '../components/BackendStatus';
 import { Property } from '../types';
-import { mockPropertyService } from '../services/mockPropertyService';
+import { propertyService } from '../services/propertyService';
 
 const HomePage: React.FC = () => {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     const fetchProperties = async () => {
       try {
         setLoading(true);
-        const fetchedProperties = await mockPropertyService.getAllProperties();
+        const fetchedProperties = await propertyService.getAllProperties();
         setProperties(fetchedProperties);
         setFeaturedProperties(fetchedProperties.slice(0, 3));
       } catch (err) {

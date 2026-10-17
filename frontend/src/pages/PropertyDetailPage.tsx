@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import { Property } from '../types';
-import { mockPropertyService } from '../services/mockPropertyService';
+import { propertyService } from '../services/propertyService';
+import { useParams } from 'react-router-dom';
 
 const PropertyDetailPage: React.FC = () => {
   const [property, setProperty] = useState<Property | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
     // En una aplicación real, se obtendría el ID de la propiedad desde las rutas
@@ -16,7 +18,10 @@ const PropertyDetailPage: React.FC = () => {
         setLoading(true);
         // En una aplicación real, se obtendría el ID desde las rutas
         // Por ahora, usamos el primer ID disponible
-        const fetchedProperty = await mockPropertyService.getPropertyById(1);
+        if (!id) {
+          throw new Error('ID de propiedad no proporcionado');
+        }
+        const fetchedProperty = await propertyService.getPropertyById(parseInt(id, 10));
         setProperty(fetchedProperty);
       } catch (err) {
         console.error('Error al obtener la propiedad:', err);
@@ -27,7 +32,7 @@ const PropertyDetailPage: React.FC = () => {
     };
 
     fetchProperty();
-  }, []);
+  }, [id]);
 
   if (loading) {
     return (
